@@ -3,7 +3,7 @@
     
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="index" />
     <meta name="hexo-theme-A4" content="v1.8.3" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
@@ -11,7 +11,7 @@
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -52,9 +52,18 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 7.1.1"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.2.0"></head>
     
     
     <body>
@@ -70,6 +79,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -124,7 +135,7 @@
         
             
         
-        <h2 id="我的2024愿景"><a href="#我的2024愿景" class="headerlink" title="我的2024愿景"></a>我的2024愿景</h2><h3 id="💪-健康"><a href="#💪-健康" class="headerlink" title="💪 健康"></a>💪 健康</h3><ul>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="我的2024愿景"><a href="#我的2024愿景" class="headerlink" title="我的2024愿景"></a>我的2024愿景</h2><h3 id="💪-健康"><a href="#💪-健康" class="headerlink" title="💪 健康"></a>💪 健康</h3><ul>
 <li>养成良好作息，10点前入睡，7点前起床</li>
 <li>练习跑步，完成一次半马</li>
 </ul>
@@ -147,7 +158,12 @@
 <li>换工作</li>
 <li>找到能一起生活的人</li>
 </ul>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -155,6 +171,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
     <div class="comments-container">
@@ -241,13 +264,6 @@
 <script src="/js/toc.js"></script>
 
     
-    
-    
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
 
     
 <script src="/js/randomHeaderContent.js"></script>
@@ -260,13 +276,16 @@
     
 
     
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -275,6 +294,14 @@
             
                 <!-- 回到顶部的按钮-->  
                 <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
                     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
                     </svg>
