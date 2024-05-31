@@ -109,11 +109,7 @@
             
         
             
-                <li><i>
-                    
-                        <a style="color: #4e7dde;" href="/categories/">分类</a>
-                    
-                </i></li>
+                <li><a href="/categories/">分类</a></li>
             
         
     </ul>
@@ -124,47 +120,81 @@
 
                     
                     
-                        
-
-<div class="archive-list">
-  <ul class="archive">
-
-    
-    <span>🔖<i>个人</i></span>
-          
-    
-
-    
-    
-
-    
-    
-
-  
-    
-        <li>
-          <span class="archive-date">2024/05/31</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2024/05/31/2024-05-%E6%9C%88%E6%80%BB%E7%BB%93/">2024-05 月总结</a>
-          </div>
-        </li>
-    
-  
-    
-        <li>
-          <span class="archive-date">2024/04/30</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2024/04/30/2024-04-%E6%9C%88%E6%80%BB%E7%BB%93/">2024-04 月总结</a>
-          </div>
-        </li>
-    
-  
-  </ul>
-</div>
- 
-                    
                     
                     <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+
+    <div class="post-md">
+        
+            
+        
+        
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'walinetalk.moecai.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '留下你的评论吧。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
                     
                     
                     <div class="footer">
