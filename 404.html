@@ -62,7 +62,28 @@
 <meta name="generator" content="Hexo 7.2.0"></head>
     
     
+    
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -172,31 +193,4 @@
                 </div>
             
     </body>
-
-
-    <!--暗黑模式-->
-    <script src="/js/darkmode-js.min.js"></script>
-    <script>
-        function addDarkmodeWidget() {
-        const options = {
-            bottom: '53px', // default: '32px'
-            right: 'unset', // default: '32px'
-            left: '42px', // default: 'unset'
-            time: '0.3s', // default: '0.3s'
-            mixColor: '#fff', // default: '#fff'
-            backgroundColor: ' #e4e4e4 ',  // default: '#fff'
-            buttonColorDark: '#100f2c',  // default: '#100f2c'
-            buttonColorLight: '#fff', // default: '#fff'
-            saveInCookies: true, // default: true,
-            label: '🌓', // default: ''
-            autoMatchOsTheme: true // default: true
-        }
-    
-        const darkmode = new Darkmode(options);
-        darkmode.showWidget();
-        
-        }
-        window.addEventListener('load', addDarkmodeWidget);
-    </script>
-  
 </html>
