@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="oh-my-zsh 配置" />
+    <meta name="hexo-theme-A4" content="v1.8.3" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>半见</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery-bundle.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    
+
+    
+    
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '40px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">半见</a> 
+            <span class="description"></span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        
+            
+                <div class="post-main-title">
+                    oh-my-zsh 配置
+                </div>
+            
+        
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-oh-my-zsh"><span class="post-toc-text">安装 oh-my-zsh</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="post-toc-text">配置主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90"><span class="post-toc-text">常用主题推荐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="post-toc-text">更改主题</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="post-toc-text">插件管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="post-toc-text">常用插件推荐</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#zsh-autosuggestions"><span class="post-toc-text">zsh-autosuggestions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#zsh-syntax-highlighting"><span class="post-toc-text">zsh-syntax-highlighting</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#z"><span class="post-toc-text">z</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#extract"><span class="post-toc-text">extract</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%90%AF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="post-toc-text">启用插件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE"><span class="post-toc-text">其他配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#root-%E7%94%A8%E6%88%B7"><span class="post-toc-text">root 用户</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%90%86"><span class="post-toc-text">配置本地代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%AA%E4%BA%BA%E6%9C%80%E7%BB%88%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B%EF%BC%8C%E4%BE%9B%E5%8F%82%E8%80%83"><span class="post-toc-text">个人最终配置示例，供参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="post-toc-text">参考链接</span></a></li></ol>
+            
+        
+        <div class=".article-gallery"><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>类 <code>linux</code> 的系统或者运行环境的默认 <code>shell</code> 使用起来不是很很方便，当前最流行的使用 <code>zsh</code> 来代替默认的 <code>shell</code> ，而  <code>oh-my-zsh</code>  是基于zsh来做的，用于管理 <code>zsh</code> 配置。它包含了大量的插件和主题，可以极大地增强zsh的功能和美观性。通过简单的安装和配置，用户可以快速上手并享受更强大的命令行体验。</p>
+<h2 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h2><ul>
+<li>首先判断有没有 <code>zsh</code> 环境</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zsh --version</span><br><span class="line">zsh 5.8 (x86_64-ubuntu-linux-gnu)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果 <code>command not found</code> ，需要先安装 <code>zsh</code> , 查看 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">Installing Zsh</a> 安装 <code>zsh</code> ，我给出 <code>Ubuntu</code> 安装的指令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install zsh</span><br><span class="line">zsh --version</span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br><span class="line"><span class="comment">#重新登录或重启终端以应用更改</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装 <code>oh-my-zsh</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>curl</td>
+<td><code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</code></td>
+</tr>
+<tr>
+<td>wget</td>
+<td><code>sh -c &quot;$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</code></td>
+</tr>
+<tr>
+<td>fetch</td>
+<td><code>sh -c &quot;$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</code></td>
+</tr>
+</tbody></table>
+<p>如果无法访问，可以使用下面的链接</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>curl</td>
+<td><code>sh -c &quot;$(curl -fsSL https://install.ohmyz.sh)&quot;</code></td>
+</tr>
+<tr>
+<td>wget</td>
+<td><code>sh -c &quot;$(wget -O- https://install.ohmyz.sh)&quot;</code></td>
+</tr>
+<tr>
+<td>fetch</td>
+<td><code>sh -c &quot;$(fetch -o - &lt;https://install.ohmyz.sh)&quot;</code></td>
+</tr>
+</tbody></table>
+<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><h3 id="常用主题推荐"><a href="#常用主题推荐" class="headerlink" title="常用主题推荐"></a>常用主题推荐</h3><p> <code>oh-my-zsh</code> 提供一批内置主题，可以直接设置使用</p>
+<p>你可以在内置主题样式截图中查看所有<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">zsh 内置的主题样式</a> 和对应的主题名。这些内置主题已经放在 <code>~/.oh-my-zsh/themes</code> 目录下，不需要再下载。</p>
+<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/oh-my-zsh-theme-list.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/oh-my-zsh-theme-list.png" class="" title="oh-my-zsh主题"></a>
+
+<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><p>直接修改 <code>ZSH_THEME</code> 行，我当前使用的 <code>haoomz</code> 主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget -O <span class="variable">$ZSH_CUSTOM</span>/themes/haoomz.zsh-theme https://cdn.haoyep.com/gh/leegical/Blog_img/zsh/haoomz.zsh-theme</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;haoomz&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下</p>
+<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/haoomz_theme_demo.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/haoomz_theme_demo.png" class="" title="haoomz主题"></a>
+
+<h2 id="插件管理"><a href="#插件管理" class="headerlink" title="插件管理"></a>插件管理</h2><p> <code>oh-my-zsh</code>  已经内置了 <code>git</code> 插件，内置插件可以在 <code>/.oh-my-zsh/plugins</code> 中查看，下面介绍一下我常用的插件，更多插件可以在<a target="_blank" rel="noopener" href="https://github.com/unixorn/awesome-zsh-plugins">awesome-zsh-plugins</a> 里查看。</p>
+<h3 id="常用插件推荐"><a href="#常用插件推荐" class="headerlink" title="常用插件推荐"></a>常用插件推荐</h3><h4 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h4><p><code>zsh-autosuggestions</code> 是一个命令提示插件，当你输入命令时，会自动推测你可能需要输入的命令，按下右键可以快速采用建议。效果如下：</p>
+<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/autosuggestions.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/autosuggestions.png" class="" title="zsh-autosuggestionssdemo"></a>
+
+<p>安装方式：把插件下载到本地的 <code>~/.oh-my-zsh/custom/plugins</code> 目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+
+<h4 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h4><p><code>zsh-syntax-highlighting</code> 是一个命令语法校验插件，在输入命令的过程中，若指令不合法，则指令显示为红色，若指令合法就会显示为绿色。效果如下：</p>
+<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/syntax-highlighting.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/syntax-highlighting.png" class="" title="命令语法校验"></a>
+<p>安装方式：把插件下载到本地的 ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins 目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
+
+<h4 id="z"><a href="#z" class="headerlink" title="z"></a>z</h4><p><code>oh-my-zsh</code> 内置了 <code>z</code> 插件。<code>z</code> 是一个文件夹快捷跳转插件，对于曾经跳转过的目录，只需要输入最终目标文件夹名称，就可以快速跳转，避免再输入长串路径，提高切换文件夹的效率。效果如下：</p>
+<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/z.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/z.png" class="" title="使用z跳转目录"></a>
+
+<h4 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h4><p> <code>oh-my-zsh</code>  内置了 <code>extract</code> 插件。<code>extract</code> 用于解压任何压缩文件，不必根据压缩文件的后缀名来记忆压缩软件。使用 <code>x</code> 命令即可解压文件，效果如下：</p>
+<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/extract.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/extract.png" class="" title="解压"></a>
+
+<h3 id="启用插件"><a href="#启用插件" class="headerlink" title="启用插件"></a>启用插件</h3><p>修改 <code>~/.zshrc</code> 中插件列表为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h2><h3 id="root-用户"><a href="#root-用户" class="headerlink" title="root 用户"></a>root 用户</h3><p>当你配置好登陆用户的 <code>zsh</code> 后，如果使用 <code>sudo su</code> 命令进入 <code>root</code> 用户的终端，发现还是默认的 <code>bash</code>。建议在 <code>root</code> 用户的终端下，也安装 <code>on my zsh</code> ，设置与普通用户不同的主题以便区分，插件可以使用一样的。 <code>root</code> 用户的 <code>~/.zshrc</code> 配置，仅供参考：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;ys&quot;</span></span><br><span class="line">plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract web-search)</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">plugins=(git colored-man-pages colorize <span class="built_in">cp</span> man command-not-found <span class="built_in">sudo</span> suse ubuntu archlinux zsh-navigation-tools z extract history-substring-search python zsh-autosuggestions zsh-syntax-highlighting)</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置本地代理"><a href="#配置本地代理" class="headerlink" title="配置本地代理"></a>配置本地代理</h3><p>如果你配置了本地代理，并希望终端的 <code>git</code> 等命令使用代理，那么可以在 <code>~/.zshrc</code> 中添加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 为 curl wget git 等设置代理, 自行替换代理地址和端口</span></span><br><span class="line"><span class="function"><span class="title">proxy</span></span> () &#123;</span><br><span class="line">  <span class="built_in">export</span> ALL_PROXY=<span class="string">&quot;socks5://127.0.0.1:1089&quot;</span></span><br><span class="line">  <span class="built_in">export</span> all_proxy=<span class="string">&quot;socks5://127.0.0.1:1089&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line"><span class="function"><span class="title">unproxy</span></span> () &#123;</span><br><span class="line">  <span class="built_in">unset</span> ALL_PROXY</span><br><span class="line">  <span class="built_in">unset</span> all_proxy</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以后在使用 <code>git</code> 等命令之前，只需要在终端中输入 <code>proxy</code> 命令，即可使用本地代理。</p>
+<h3 id="个人最终配置示例，供参考"><a href="#个人最终配置示例，供参考" class="headerlink" title="个人最终配置示例，供参考"></a>个人最终配置示例，供参考</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Path to your Oh My Zsh installation.</span></span><br><span class="line"><span class="built_in">export</span> ZSH=<span class="string">&quot;<span class="variable">$HOME</span>/.oh-my-zsh&quot;</span></span><br><span class="line"></span><br><span class="line">ZSH_THEME=<span class="string">&quot;haoomz&quot;</span></span><br><span class="line"></span><br><span class="line">plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> <span class="variable">$ZSH</span>/oh-my-zsh.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># User configuration</span></span><br><span class="line"></span><br><span class="line">host_ip=$(ip route show | grep -i default | awk <span class="string">&#x27;&#123; print $3&#125;&#x27;</span>)</span><br><span class="line"><span class="comment"># 为 curl wget git npm apt 等设置代理</span></span><br><span class="line"><span class="function"><span class="title">proxy</span></span> () &#123;</span><br><span class="line">  <span class="built_in">export</span> ALL_PROXY=<span class="string">&quot;http://<span class="variable">$host_ip</span>:10808&quot;</span></span><br><span class="line">  <span class="built_in">export</span> all_proxy=<span class="string">&quot;http://<span class="variable">$host_ip</span>:10808&quot;</span></span><br><span class="line"> <span class="comment"># echo -e &quot;Acquire::http::Proxy \&quot;http://$host_ip:10808\&quot;;&quot; | sudo tee -a /etc/apt/apt.conf &gt; /dev/null</span></span><br><span class="line"> <span class="comment"># echo -e &quot;Acquire::https::Proxy \&quot;http://$host_ip:10808\&quot;;&quot; | sudo tee -a /etc/apt/apt.conf &gt; /dev/null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line"><span class="function"><span class="title">unproxy</span></span> () &#123;</span><br><span class="line">  <span class="built_in">unset</span> ALL_PROXY</span><br><span class="line">  <span class="built_in">unset</span> all_proxy</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> NVM_DIR=<span class="string">&quot;<span class="variable">$HOME</span>/.nvm&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span>  <span class="comment"># This loads nvm</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/bash_completion&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/bash_completion&quot;</span>  <span class="comment"># This loads nvm bash_completion</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm</span></span><br><span class="line"><span class="built_in">export</span> PNPM_HOME=<span class="string">&quot;/home/banjian/.local/share/pnpm&quot;</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;:<span class="variable">$PATH</span>:&quot;</span> <span class="keyword">in</span></span><br><span class="line">  *<span class="string">&quot;:<span class="variable">$PNPM_HOME</span>:&quot;</span>*) ;;</span><br><span class="line">  *) <span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$PNPM_HOME</span>:<span class="variable">$PATH</span>&quot;</span> ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="comment"># pnpm end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki">oh-my-zsh wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.haoyep.com/posts/zsh-config-oh-my-zsh/#tips">Zsh 安装与配置，使用 Oh-My-Zsh 美化终端</a></p>
+</div>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-09-24</span>
+            
+                <span>该篇文章被 半见</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/'>
+                            工程化
+                        </a>
+                    
+                        <a href='/tags/bash/'>
+                            bash
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E9%85%8D%E7%BD%AE/'>
+                            配置
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    
+        
+            
+    
+        
+            <div class="post-footer-pre-next">
+                
+
+                
+                    <span class="post-footer-pre-next-last-span-right">下一篇：<a href="/2024/07/30/2024-07-%E6%9C%88%E6%80%BB%E7%BB%93/">2024-07-月总结</a>
+                    </span>
+                
+            </div>
+
+        
+    
+
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上 
+    </div>
+    
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'walinetalk.moecai.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '留下你的评论吧。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+
+    
+    
+    
+    </div>
+
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌑梦里不觉秋已深，余情岂是为他人</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery/lightgallery.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-thumbnail.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-fullscreen.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-autoplay.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-zoom.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-rotate.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-paper.umd.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+     
+    if (typeof lightGallery !== "undefined") {
+        var options1 = {
+            selector: '.gallery-item',
+            plugins: [lgThumbnail, lgFullscreen, lgAutoplay, lgZoom, lgRotate, lgPager], // 启用插件
+            thumbnail: true,          // 显示缩略图
+            zoom: true,               // 启用缩放功
+            rotate: true,             // 启用旋转功能能
+            autoplay: true,        // 启用自动播放功能
+            fullScreen: true,      // 启用全屏功能
+            pager: false, //页码,
+            zoomFromOrigin: true,   // 从原始位置缩放
+            actualSize: true,       // 启用查看实际大小的功能
+            enableZoomAfter: 300,    // 延迟缩放，确保图片加载完成后可缩放
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1); // 修复选择器
+    }
+    
+</script>
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

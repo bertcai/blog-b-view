@@ -60,7 +60,7 @@
     
     
    
-<link rel="stylesheet" href="/css/lightgallery.min.css">
+<link rel="stylesheet" href="/css/lightgallery-bundle.min.css">
 
 
 <meta name="generator" content="Hexo 7.3.0"></head>
@@ -85,7 +85,7 @@
         
         <script>
             const options = {
-                bottom: '53px', // default: '32px'
+                bottom: '40px', // default: '32px'
                 right: 'unset', // default: '32px'
                 left: '42px', // default: 'unset'
                 time: '0.3s', // default: '0.3s'
@@ -164,9 +164,13 @@
                         <div class="post-main">
 
     
-        <div class="post-main-title">
-            Longest Substring-滑动窗口思想
-        </div>
+        
+            
+                <div class="post-main-title">
+                    Longest Substring-滑动窗口思想
+                </div>
+            
+        
       
     
 
@@ -176,7 +180,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%80%9D%E6%83%B3"><span class="post-toc-text">滑动窗口思想</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="post-toc-text">基本思想</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A-leetcode-3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2"><span class="post-toc-text">例子： leetcode 3. 无重复字符的最长子串</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BC%98%E5%8A%BF%E5%8F%8A%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="post-toc-text">优势及适用场景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="post-toc-text">时间复杂度与空间复杂度</span></a></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="滑动窗口思想"><a href="#滑动窗口思想" class="headerlink" title="滑动窗口思想"></a>滑动窗口思想</h2><p>滑动窗口是一种基于双指针的技术，常用于处理数组或字符串的子串问题。它通过维护一个可以滑动的窗口来解决一些特定的问题。</p>
+        <div class=".article-gallery"><h2 id="滑动窗口思想"><a href="#滑动窗口思想" class="headerlink" title="滑动窗口思想"></a>滑动窗口思想</h2><p>滑动窗口是一种基于双指针的技术，常用于处理数组或字符串的子串问题。它通过维护一个可以滑动的窗口来解决一些特定的问题。</p>
 <h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>滑动窗口的基本思想是使用两个指针，通常称为左指针和右指针，来构建一个可调整大小的窗口。初始时，左右指针都指向数组或字符串的开始位置。然后，通过移动右指针来扩展窗口，同时根据题目要求调整窗口，直到满足特定的条件。一旦满足条件，我们可以更新结果，然后尝试缩小窗口，即移动左指针，继续寻找下一个满足条件的窗口。</p>
 <p>基本步骤如下：</p>
 <ol>
@@ -198,12 +202,7 @@
 </ul>
 <h2 id="时间复杂度与空间复杂度"><a href="#时间复杂度与空间复杂度" class="headerlink" title="时间复杂度与空间复杂度"></a>时间复杂度与空间复杂度</h2><p>滑动窗口通常可以将问题的时间复杂度优化为 O(n)，其中 n 是数组或字符串的长度。这是因为滑动窗口只需要遍历一次数组或字符串，并且每个元素最多被访问两次，即被左右指针各访问一次。</p>
 <p>空间复杂度主要取决于额外使用的数据结构，通常是 O(k)，其中 k 是滑动窗口的大小。这是因为滑动窗口需要使用一个额外的数据结构来存储窗口中的元素或记录窗口的状态。</p>
-</div><script src="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
-        var options1 = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
-        }</script>
+</div>
     </div>
 
     <div class="post-meta">
@@ -246,10 +245,21 @@
     </div>
     <br>
     
-    <!-- <div class="post-footer-pre-next">
-        <span>上一篇：<a href=""></a></span>
-        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
-    </div> -->
+    
+        
+            
+    
+        
+            <div class="post-footer-pre-next">
+                
+                    <span>上一篇：<a href='/2024/04/30/2024-04-%E6%9C%88%E6%80%BB%E7%BB%93/'>2024-04 月总结</a></span>
+                
+
+                
+            </div>
+
+        
+    
 
     
         
@@ -358,10 +368,51 @@
 
 
 
-<script src="/js/lightgallery.min.js"></script>
+<script src="/js/lightgallery/lightgallery.umd.min.js"></script>
 
 
 
+<script src="/js/lightgallery/plugins/lg-thumbnail.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-fullscreen.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-autoplay.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-zoom.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-rotate.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-paper.umd.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+     
+    if (typeof lightGallery !== "undefined") {
+        var options1 = {
+            selector: '.gallery-item',
+            plugins: [lgThumbnail, lgFullscreen, lgAutoplay, lgZoom, lgRotate, lgPager], // 启用插件
+            thumbnail: true,          // 显示缩略图
+            zoom: true,               // 启用缩放功
+            rotate: true,             // 启用旋转功能能
+            autoplay: true,        // 启用自动播放功能
+            fullScreen: true,      // 启用全屏功能
+            pager: false, //页码,
+            zoomFromOrigin: true,   // 从原始位置缩放
+            actualSize: true,       // 启用查看实际大小的功能
+            enableZoomAfter: 300,    // 延迟缩放，确保图片加载完成后可缩放
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1); // 修复选择器
+    }
+    
+</script>
                 </div>
             
             
