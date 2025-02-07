@@ -117,14 +117,26 @@
 
 <div class="header">
     <div class="header-container">
-        <img style="
-        width: 56px;
-        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <style>
+            .header-img {
+                width: 56px;
+                height: auto;
+                object-fit: cover; /* 保持图片比例 */
+                transition: transform 0.3s ease-in-out; 
+                border-radius: 0; 
+            }
+            
+        </style>
+        <img 
+            alt="^-^" 
+            cache-control="max-age=86400" 
+            class="header-img" 
+            src="/img/favicon.webp" 
+        />
         <div class="header-content">
             <a class="logo" href="/">半见</a> 
             <span class="description"></span> 
         </div>
-        
     </div>
     
    
@@ -180,6 +192,9 @@
       
 
       <!--先放 置顶 文章-->
+      
+
+      <!--rough-notation风格效果-->
       
 
       <!--文章先按照时间排好序-->
