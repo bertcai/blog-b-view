@@ -63,6 +63,12 @@
 <link rel="stylesheet" href="/css/lightgallery-bundle.min.css">
 
 
+   
+        
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+    <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css' /> 
 <meta name="generator" content="Hexo 7.3.0"></head>
     
     
@@ -77,9 +83,13 @@
     
     
 
+
+
+
     
     
-    
+
+
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
@@ -102,14 +112,16 @@
         </script>
         
         
-            <div class="left-toc-container">
-                <nav id="toc" class="bs-docs-sidebar"></nav>
-            </div>
+            
+                <div class="left-toc-container">
+                    <nav id="toc" class="bs-docs-sidebar"></nav>
+                </div>
+            
         
         <div class="paper">
+
             
-            
-            
+
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
@@ -163,14 +175,14 @@
             
         
     </ul>
-</div> 
-        
+</div>
+
                     
                     
 
                     
                     
-                    
+
                     <!--说明是文章post页面-->
                     
                         <div class="post-main">
@@ -193,7 +205,7 @@
             <div class="post-head-meta-center">
         
                 
-                    <span>最近更新：2025-03-14</span> 
+                    <span>最近更新：2025-07-13</span> 
                 
                 
                     
@@ -281,34 +293,28 @@
 </tbody></table>
 <h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><h3 id="常用主题推荐"><a href="#常用主题推荐" class="headerlink" title="常用主题推荐"></a>常用主题推荐</h3><p> <code>oh-my-zsh</code> 提供一批内置主题，可以直接设置使用</p>
 <p>你可以在内置主题样式截图中查看所有<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">zsh 内置的主题样式</a> 和对应的主题名。这些内置主题已经放在 <code>~/.oh-my-zsh/themes</code> 目录下，不需要再下载。</p>
-<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/oh-my-zsh-theme-list.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/oh-my-zsh-theme-list.png" class="" title="oh-my-zsh主题"></a>
-
+<p><a href="/oh-my-zsh-theme-list.png" title="oh-my-zsh主题" class="gallery-item" style="box-shadow: none;"> <img src="/oh-my-zsh-theme-list.png" alt="oh-my-zsh主题"></a></p>
 <h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><p>直接修改 <code>ZSH_THEME</code> 行，我当前使用的 <code>haoomz</code> 主题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget -O <span class="variable">$ZSH_CUSTOM</span>/themes/haoomz.zsh-theme https://cdn.haoyep.com/gh/leegical/Blog_img/zsh/haoomz.zsh-theme</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=<span class="string">&quot;haoomz&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果如下</p>
-<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/haoomz_theme_demo.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/haoomz_theme_demo.png" class="" title="haoomz主题"></a>
-
+<p><a href="/haoomz_theme_demo.png" title="haoomz主题" class="gallery-item" style="box-shadow: none;"> <img src="/haoomz_theme_demo.png" alt="haoomz主题"></a></p>
 <h2 id="插件管理"><a href="#插件管理" class="headerlink" title="插件管理"></a>插件管理</h2><p> <code>oh-my-zsh</code>  已经内置了 <code>git</code> 插件，内置插件可以在 <code>/.oh-my-zsh/plugins</code> 中查看，下面介绍一下我常用的插件，更多插件可以在<a target="_blank" rel="noopener" href="https://github.com/unixorn/awesome-zsh-plugins">awesome-zsh-plugins</a> 里查看。</p>
 <h3 id="常用插件推荐"><a href="#常用插件推荐" class="headerlink" title="常用插件推荐"></a>常用插件推荐</h3><h4 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h4><p><code>zsh-autosuggestions</code> 是一个命令提示插件，当你输入命令时，会自动推测你可能需要输入的命令，按下右键可以快速采用建议。效果如下：</p>
-<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/autosuggestions.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/autosuggestions.png" class="" title="zsh-autosuggestionssdemo"></a>
-
+<p><a href="/autosuggestions.png" title="zsh-autosuggestionssdemo" class="gallery-item" style="box-shadow: none;"> <img src="/autosuggestions.png" alt="zsh-autosuggestionssdemo"></a></p>
 <p>安装方式：把插件下载到本地的 <code>~/.oh-my-zsh/custom/plugins</code> 目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
 
 <h4 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h4><p><code>zsh-syntax-highlighting</code> 是一个命令语法校验插件，在输入命令的过程中，若指令不合法，则指令显示为红色，若指令合法就会显示为绿色。效果如下：</p>
-<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/syntax-highlighting.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/syntax-highlighting.png" class="" title="命令语法校验"></a>
-<p>安装方式：把插件下载到本地的 <code>~/.oh-my-zsh/custom/plugins</code> 目录。</p>
+<p><a href="/syntax-highlighting.png" title="命令语法校验" class="gallery-item" style="box-shadow: none;"> <img src="/syntax-highlighting.png" alt="命令语法校验"></a><br>安装方式：把插件下载到本地的 <code>~/.oh-my-zsh/custom/plugins</code> 目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure>
 
 <h4 id="z"><a href="#z" class="headerlink" title="z"></a>z</h4><p><code>oh-my-zsh</code> 内置了 <code>z</code> 插件。<code>z</code> 是一个文件夹快捷跳转插件，对于曾经跳转过的目录，只需要输入最终目标文件夹名称，就可以快速跳转，避免再输入长串路径，提高切换文件夹的效率。效果如下：</p>
-<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/z.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/z.png" class="" title="使用z跳转目录"></a>
-
+<p><a href="/z.png" title="使用z跳转目录" class="gallery-item" style="box-shadow: none;"> <img src="/z.png" alt="使用z跳转目录"></a></p>
 <h4 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h4><p> <code>oh-my-zsh</code>  内置了 <code>extract</code> 插件。<code>extract</code> 用于解压任何压缩文件，不必根据压缩文件的后缀名来记忆压缩软件。使用 <code>x</code> 命令即可解压文件，效果如下：</p>
-<a href="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/extract.png" class="gallery-item" style="box-shadow: none;"> <img src="/2024/09/24/oh-my-zsh-%E9%85%8D%E7%BD%AE/extract.png" class="" title="解压"></a>
-
+<p><a href="/extract.png" title="解压" class="gallery-item" style="box-shadow: none;"> <img src="/extract.png" alt="解压"></a></p>
 <h3 id="启用插件"><a href="#启用插件" class="headerlink" title="启用插件"></a>启用插件</h3><p>修改 <code>~/.zshrc</code> 中插件列表为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)</span><br></pre></td></tr></table></figure>
 
@@ -385,18 +391,18 @@
     <div class="comments-container">
     <div id="comment-anchor"></div>
     <div class="comment-area-title">
-        以上 
+        以上
     </div>
     
         
 
     <div id="waline"></div>
     <script type="module"  >
-        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs';
         function loadWaline() {
             init({
                 el: '#waline',
-                serverURL: 'walinetalk.moecai.com',
+                serverURL: 'walinetalk.moecai.cc',
                 lang: 'zh-CN',
                 dark: 'body[class~="dark-mode"]',
                 requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
@@ -406,17 +412,18 @@
                 comment: false, // 评论数统计
 
                 locale: {
-                    placeholder: '留下你的评论吧。', 
+                    placeholder: '留下你的评论吧。',
                     sofa: ''
                 },
             });
-            
+
         }
         window.addEventListener('DOMContentLoaded', loadWaline);
     </script>
 
 
 
+    
     
     
     
@@ -428,9 +435,9 @@
 
 
 
-                                      
+
                     
-                    
+
                     <div class="footer">
     
         <span> 
@@ -543,7 +550,7 @@
                 </div>
             
             
-                <!-- 回到顶部的按钮-->  
+                <!-- 回到顶部的按钮-->
                 <div class="progress-wrap shadow-drop-2-bottom">
                     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
@@ -551,7 +558,7 @@
                 </div>
             
             
-                <!-- 返回的按钮-->  
+                <!-- 返回的按钮-->
                 <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
                     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
@@ -560,3 +567,9 @@
             
     </body>
 </html>
+<script src="/js/emojiHandler.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        wrapEmojis('.paper');
+    });
+</script>
